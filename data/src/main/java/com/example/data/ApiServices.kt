@@ -1,11 +1,11 @@
 package com.example.data
 
-import com.example.data.model.character_data.CharacterResponsesBodyData
-import com.example.data.model.character_data.CharacterResultResponsesBodyData
-import com.example.data.model.episode_data.EpisodeResponsesBodyData
-import com.example.data.model.episode_data.EpisodeResultResponsesBodyData
-import com.example.data.model.location_responses.LocationResponsesBodyData
-import com.example.data.model.location_responses.LocationResultResponsesBodyData
+import com.example.data.model.responses.CharactersResponse
+import com.example.data.model.responses.CharacterResponse
+import com.example.data.model.responses.EpisodesResponse
+import com.example.data.model.responses.EpisodeResponse
+import com.example.data.model.responses.LocationsResponse
+import com.example.data.model.responses.LocationResponse
 import retrofit2.http.*
 
 interface ApiServices {
@@ -13,31 +13,31 @@ interface ApiServices {
     @GET("character")
     suspend fun getCharacters(
         @Query("page") page: Int?
-    ): CharacterResponsesBodyData
+    ): CharactersResponse
 
     @GET("character/{id}")
     suspend fun getCharacter(
         @Path("id") id: Int
-    ): CharacterResultResponsesBodyData
+    ): CharacterResponse
 
     @GET("location")
     suspend fun getLocations(
         @Query("page") page: Int?
-    ): LocationResponsesBodyData
+    ): LocationsResponse
 
     @GET("location/{id}")
     suspend fun getLocation(
         @Path("id") id: Int
-    ): LocationResultResponsesBodyData
+    ): LocationResponse
 
     @GET("episode")
     suspend fun getEpisodes(
         @Query("page") page: Int?
-    ): EpisodeResponsesBodyData
+    ): EpisodesResponse
 
     @GET("episode/{id}")
     suspend fun getEpisode(
         @Path("id") id: Int
-    ): EpisodeResultResponsesBodyData
+    ): EpisodeResponse
 
 }

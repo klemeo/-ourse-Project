@@ -1,17 +1,17 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.data.model.episode_body.EpisodeResponsesBody
-import com.example.data.model.episode_body.InfoResponsesBody
-import com.example.data.model.episode_body.EpisodeResultResponsesBody
-import com.example.data.model.episode_data.EpisodeResponsesBodyData
+import com.example.data.model.result.Episodes
+import com.example.data.model.result.Episode
+import com.example.data.model.responses.EpisodesResponse
+import com.example.data.model.result.Info
 
 class EpisodesDataMapper :
-    Mapper<EpisodeResponsesBodyData, EpisodeResponsesBody> {
+    Mapper<EpisodesResponse, Episodes> {
 
-    override fun map(origin: EpisodeResponsesBodyData) = EpisodeResponsesBody(
+    override fun map(origin: EpisodesResponse) = Episodes(
         info = origin.info.let { infoData ->
-            InfoResponsesBody(
+            Info(
                 count = infoData?.count,
                 next = infoData?.next,
                 pages = infoData?.pages,
@@ -19,7 +19,7 @@ class EpisodesDataMapper :
             )
         },
         results = origin.results?.map { resultData ->
-            EpisodeResultResponsesBody(
+            Episode(
                 airDate = resultData.airDate,
                 characters = resultData.characters,
                 created = resultData.created,

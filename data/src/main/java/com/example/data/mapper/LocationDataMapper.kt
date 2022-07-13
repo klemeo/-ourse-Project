@@ -1,13 +1,13 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.data.model.location_body.LocationResultResponsesBody
-import com.example.data.model.location_responses.LocationResultResponsesBodyData
+import com.example.data.model.result.Location
+import com.example.data.model.responses.LocationResponse
 
 class LocationDataMapper :
-    Mapper<LocationResultResponsesBodyData, LocationResultResponsesBody> {
+    Mapper<LocationResponse, Location> {
 
-    override fun map(origin: LocationResultResponsesBodyData) = LocationResultResponsesBody(
+    override fun map(origin: LocationResponse) = Location(
         created = origin.created,
         dimension = origin.dimension,
         id = origin.id,

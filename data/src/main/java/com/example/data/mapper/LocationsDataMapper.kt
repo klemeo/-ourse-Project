@@ -1,17 +1,17 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.data.model.location_body.InfoResponsesBody
-import com.example.data.model.location_body.LocationResponsesBody
-import com.example.data.model.location_body.LocationResultResponsesBody
-import com.example.data.model.location_responses.LocationResponsesBodyData
+import com.example.data.model.result.Locations
+import com.example.data.model.result.Location
+import com.example.data.model.responses.LocationsResponse
+import com.example.data.model.result.Info
 
 class LocationsDataMapper :
-    Mapper<LocationResponsesBodyData, LocationResponsesBody> {
+    Mapper<LocationsResponse, Locations> {
 
-    override fun map(origin: LocationResponsesBodyData) = LocationResponsesBody(
+    override fun map(origin: LocationsResponse) = Locations(
         info = origin.info.let { info ->
-            InfoResponsesBody(
+            Info(
                 count = info?.count,
                 next = info?.next,
                 pages = info?.pages,
@@ -19,7 +19,7 @@ class LocationsDataMapper :
             )
         },
         results = origin.results?.map { result ->
-            LocationResultResponsesBody(
+            Location(
                 created = result.created,
                 dimension = result.dimension,
                 id = result.id,

@@ -1,29 +1,29 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.data.model.character_body.CharacterResultResponsesBody
-import com.example.data.model.character_body.LocationResponsesBody
-import com.example.data.model.character_body.OriginResponsesBody
-import com.example.data.model.character_data.CharacterResultResponsesBodyData
+import com.example.data.model.result.Character
+import com.example.data.model.result.Origin
+import com.example.data.model.responses.CharacterResponse
+import com.example.data.model.result.Location
 
 class CharacterDataMapper :
-    Mapper<CharacterResultResponsesBodyData, CharacterResultResponsesBody> {
+    Mapper<CharacterResponse, Character> {
 
-    override fun map(origin: CharacterResultResponsesBodyData) = CharacterResultResponsesBody(
+    override fun map(origin: CharacterResponse) = Character(
         created = origin.created,
         episode = origin.episode,
         gender = origin.gender,
         id = origin.id,
         image = origin.image,
         location = origin.location.let { locationData ->
-            LocationResponsesBody(
+            Location(
                 name = locationData?.name,
                 url = locationData?.url
             )
         },
         name = origin.name,
         origin = origin.origin.let { originData ->
-            OriginResponsesBody(
+            Origin(
                 name = originData?.name,
                 url = originData?.url
             )

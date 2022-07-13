@@ -1,15 +1,15 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.data.model.character_body.*
-import com.example.data.model.character_data.CharacterResponsesBodyData
+import com.example.data.model.responses.CharactersResponse
+import com.example.data.model.result.*
 
 class CharactersDataMapper :
-    Mapper<CharacterResponsesBodyData, CharacterResponsesBody> {
+    Mapper<CharactersResponse, Characters> {
 
-    override fun map(origin: CharacterResponsesBodyData) = CharacterResponsesBody(
+    override fun map(origin: CharactersResponse) = Characters(
         info = origin.info.let { infoData ->
-            InfoResponsesBody(
+            Info(
                 count = infoData?.count,
                 next = infoData?.next,
                 pages = infoData?.pages,
@@ -17,21 +17,21 @@ class CharactersDataMapper :
             )
         },
         results = origin.results?.map { resultData ->
-            CharacterResultResponsesBody(
+            Character(
                 created = resultData.created,
                 episode = resultData.episode,
                 gender = resultData.gender,
                 id = resultData.id,
                 image = resultData.image,
                 location = resultData.location.let { locationData ->
-                    LocationResponsesBody(
+                    Location(
                         name = locationData?.name,
                         url = locationData?.url
                     )
                 },
                 name = resultData.name,
                 origin = resultData.origin.let { originData ->
-                    OriginResponsesBody(
+                    Origin(
                         name = originData?.name,
                         url = originData?.url
                     )

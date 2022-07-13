@@ -2,12 +2,12 @@ package com.example.data
 
 import com.example.data.mapper.*
 import kotlinx.coroutines.flow.Flow
-import com.example.data.model.character_body.CharacterResponsesBody
-import com.example.data.model.character_body.CharacterResultResponsesBody
-import com.example.data.model.episode_body.EpisodeResponsesBody
-import com.example.data.model.episode_body.EpisodeResultResponsesBody
-import com.example.data.model.location_body.LocationResponsesBody
-import com.example.data.model.location_body.LocationResultResponsesBody
+import com.example.data.model.result.Characters
+import com.example.data.model.result.Character
+import com.example.data.model.result.Episodes
+import com.example.data.model.result.Episode
+import com.example.data.model.result.Locations
+import com.example.data.model.result.Location
 import kotlinx.coroutines.flow.map
 
 class ApiRepositoryImpl(
@@ -24,32 +24,32 @@ class ApiRepositoryImpl(
     private val locationDataMapper by lazy { LocationDataMapper() }
 
 
-    override fun getCharacters(page: Int?): Flow<CharacterResponsesBody> =
+    override fun getCharacters(page: Int?): Flow<Characters> =
         apiResponseDataSource.getCharacters(page).map {
             charactersDataMapper.map(it)
         }
 
-    override fun getCharacter(id: Int): Flow<CharacterResultResponsesBody> =
+    override fun getCharacter(id: Int): Flow<Character> =
         apiResponseDataSource.getCharacter(id).map {
             characterDataMapper.map(it)
         }
 
-    override fun getLocations(page: Int?): Flow<LocationResponsesBody> =
+    override fun getLocations(page: Int?): Flow<Locations> =
         apiResponseDataSource.getLocations(page).map {
             locationsDataMapper.map(it)
         }
 
-    override fun getLocation(id: Int): Flow<LocationResultResponsesBody> =
+    override fun getLocation(id: Int): Flow<Location> =
         apiResponseDataSource.getLocation(id).map {
             locationDataMapper.map(it)
         }
 
-    override fun getEpisodes(page: Int?): Flow<EpisodeResponsesBody> =
+    override fun getEpisodes(page: Int?): Flow<Episodes> =
         apiResponseDataSource.getEpisodes(page).map {
             episodesDataMapper.map(it)
         }
 
-    override fun getEpisode(id: Int): Flow<EpisodeResultResponsesBody> =
+    override fun getEpisode(id: Int): Flow<Episode> =
         apiResponseDataSource.getEpisode(id).map {
             episodeDataMapper.map(it)
         }

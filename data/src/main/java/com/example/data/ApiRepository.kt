@@ -1,25 +1,25 @@
 package com.example.data
 
-import com.example.data.model.character_body.CharacterResponsesBody
-import com.example.data.model.character_body.CharacterResultResponsesBody
-import com.example.data.model.episode_body.EpisodeResponsesBody
-import com.example.data.model.episode_body.EpisodeResultResponsesBody
-import com.example.data.model.location_body.LocationResponsesBody
-import com.example.data.model.location_body.LocationResultResponsesBody
+import com.example.data.model.result.Characters
+import com.example.data.model.result.Character
+import com.example.data.model.result.Episodes
+import com.example.data.model.result.Episode
+import com.example.data.model.result.Locations
+import com.example.data.model.result.Location
 import kotlinx.coroutines.flow.Flow
 
 interface ApiRepository {
 
-    fun getCharacters(page: Int?): Flow<CharacterResponsesBody>
+    fun getCharacters(page: Int?): Flow<Characters>
 
-    fun getCharacter(id: Int): Flow<CharacterResultResponsesBody>
+    fun getCharacter(id: Int): Flow<Character>
 
-    fun getLocations(page: Int?): Flow<LocationResponsesBody>
+    fun getLocations(page: Int?): Flow<Locations>
 
-    fun getLocation(id: Int): Flow<LocationResultResponsesBody>
+    fun getLocation(id: Int): Flow<Location>
 
-    fun getEpisodes(page: Int?): Flow<EpisodeResponsesBody>
+    fun getEpisodes(page: Int?): Flow<Episodes>
 
-    fun getEpisode(id: Int): Flow<EpisodeResultResponsesBody>
+    fun getEpisode(id: Int): Flow<Episode>
 
 }
