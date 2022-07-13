@@ -2,12 +2,12 @@ package com.example.data
 
 import com.example.data.mapper.*
 import kotlinx.coroutines.flow.Flow
-import com.example.data.model.result.Characters
-import com.example.data.model.result.Character
-import com.example.data.model.result.Episodes
-import com.example.data.model.result.Episode
-import com.example.data.model.result.Locations
-import com.example.data.model.result.Location
+import com.example.domain.model.Characters
+import com.example.domain.model.Character
+import com.example.domain.model.Episodes
+import com.example.domain.model.Episode
+import com.example.domain.model.Locations
+import com.example.domain.model.Location
 import kotlinx.coroutines.flow.map
 
 class ApiRepositoryImpl(

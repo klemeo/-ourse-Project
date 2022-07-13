@@ -1,4 +1,4 @@
-package com.example.data.model.result
+package com.example.domain.model
 
 class Characters(
     val info: Info? = null,

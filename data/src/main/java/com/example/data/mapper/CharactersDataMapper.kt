@@ -2,7 +2,7 @@ package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
 import com.example.data.model.responses.CharactersResponse
-import com.example.data.model.result.*
+import com.example.domain.model.*
 
 class CharactersDataMapper :
     Mapper<CharactersResponse, Characters> {

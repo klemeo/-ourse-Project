@@ -1,10 +1,10 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.data.model.result.Character
-import com.example.data.model.result.Origin
+import com.example.domain.model.Character
+import com.example.domain.model.Origin
 import com.example.data.model.responses.CharacterResponse
-import com.example.data.model.result.Location
+import com.example.domain.model.Location
 
 class CharacterDataMapper :
     Mapper<CharacterResponse, Character> {

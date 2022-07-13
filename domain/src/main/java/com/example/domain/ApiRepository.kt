@@ -1,11 +1,6 @@
-package com.example.data
+package com.example.domain
 
-import com.example.domain.model.Characters
-import com.example.domain.model.Character
-import com.example.domain.model.Episodes
-import com.example.domain.model.Episode
-import com.example.domain.model.Locations
-import com.example.domain.model.Location
+import com.example.domain.model.*
 import kotlinx.coroutines.flow.Flow
 
 interface ApiRepository {

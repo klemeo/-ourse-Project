@@ -1,7 +1,7 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.data.model.result.Episode
+import com.example.domain.model.Episode
 import com.example.data.model.responses.EpisodeResponse
 
 class EpisodeDataMapper :

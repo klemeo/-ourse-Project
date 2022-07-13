@@ -1,10 +1,10 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.data.model.result.Locations
-import com.example.data.model.result.Location
+import com.example.domain.model.Locations
+import com.example.domain.model.Location
 import com.example.data.model.responses.LocationsResponse
-import com.example.data.model.result.Info
+import com.example.domain.model.Info
 
 class LocationsDataMapper :
     Mapper<LocationsResponse, Locations> {
