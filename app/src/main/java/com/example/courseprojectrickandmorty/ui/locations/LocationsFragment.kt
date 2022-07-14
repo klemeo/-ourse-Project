@@ -1,7 +1,40 @@
 package com.example.courseprojectrickandmorty.ui.locations
 
-import androidx.fragment.app.Fragment
+import android.view.View
+import com.example.base.mvvm.MvvmScreen
 import com.example.courseprojectrickandmorty.R
+import com.example.courseprojectrickandmorty.state.LocationsVS
+import com.example.courseprojectrickandmorty.widgets.ListWidget
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class LocationsFragment : Fragment(R.layout.f_locations) {
+class LocationsFragment : MvvmScreen<LocationsViewModel>(R.layout.f_locations) {
+
+    override val viewModel: LocationsViewModel by viewModel()
+
+    private var lvLocations: ListWidget? = null
+
+    override fun initView(view: View) {
+        lvLocations = view.findViewById(R.id.lvLocations)
+        observeViewModel()
+    }
+
+    private fun observeViewModel() {
+        viewModel.viewLocationsState.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                is LocationsVS.AddLocations -> {
+                    lvLocations?.setDataHideProgress(state.items)
+                }
+                is LocationsVS.ShowLoader -> {
+                    handleScreenStateLoading()
+                }
+                is LocationsVS.Error -> {
+
+                }
+            }
+        }
+    }
+
+    private fun handleScreenStateLoading() {
+        lvLocations?.setProgressAndItems(true)
+    }
 }
