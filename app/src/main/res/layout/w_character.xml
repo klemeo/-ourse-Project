@@ -71,7 +71,7 @@
                 android:layout_margin="2dp"
                 android:fontFamily="@font/almendra_sc"
                 android:gravity="center"
-                android:text="Earth (Replacement Dimension)" />
+                tools:text="Earth (Replacement Dimension)" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -87,7 +87,7 @@
                 android:layout_margin="2dp"
                 android:fontFamily="@font/almendra_sc"
                 android:gravity="center"
-                android:text="Rickmancing the Stone" />
+                tools:text="Rickmancing the Stone" />
 
         </LinearLayout>
 

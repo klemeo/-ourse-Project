@@ -1,11 +1,13 @@
 package com.example.courseprojectrickandmorty.app
 
+import com.example.courseprojectrickandmorty.ui.characters.CharactersViewModel
 import com.example.data.ApiRepositoryImpl
 import com.example.data.PostResponseDataSource
 import com.example.data.db.*
 import com.example.domain.ApiRepository
 import com.example.domain.interactor.*
 import org.koin.android.ext.koin.androidContext
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 private val postModule = module {
@@ -53,6 +55,16 @@ private val postModule = module {
 
 }
 
+private val viewModule = module {
+
+    viewModel {
+        CharactersViewModel(
+            charactersInteractor = get()
+        )
+    }
+
+}
+
 private val databaseModule = module {
 
     single {
@@ -72,4 +84,4 @@ private val databaseModule = module {
     }
 }
 
-val modules = listOf(postModule, databaseModule)
+val modules = listOf(postModule, databaseModule, viewModule)

@@ -46,8 +46,8 @@ class CharacterWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(co
 
         tvName?.text = item.name
         tvStatus?.text = item.status
-        tvLocation?.text = item.location
-        tvFirstSeen?.text = item.origin
+        tvLocation?.text = item.origin
+        tvFirstSeen?.text = item.location
 
         when (item.status) {
             "Alive" -> tvStatus?.getColorGreen()

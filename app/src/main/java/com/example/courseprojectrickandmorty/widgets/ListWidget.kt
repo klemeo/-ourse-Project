@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import androidx.recyclerview.widget.RecyclerView
-import com.example.base.R
+import com.example.courseprojectrickandmorty.R
 import com.example.courseprojectrickandmorty.utils.goneIf
 
 class ListWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context, attrs) {
@@ -27,6 +27,11 @@ class ListWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context
     fun setDataHideProgress(list: MutableList<WidgetItem>) {
         setData(list)
         setProgress(false)
+    }
+
+    fun setProgressAndItems(progress: Boolean) {
+        items goneIf progress
+        progressView goneIf !progress
     }
 
     private fun setData(list: MutableList<WidgetItem>) {

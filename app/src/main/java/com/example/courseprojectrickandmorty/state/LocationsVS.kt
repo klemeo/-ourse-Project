@@ -1,9 +1,9 @@
 package com.example.courseprojectrickandmorty.state
 
-import com.example.domain.model.Locations
+import com.example.courseprojectrickandmorty.widgets.WidgetItem
 
 sealed class LocationsVS {
-    class AddLocations(val locationsVM: Locations) : LocationsVS()
+    class AddLocations(val items: MutableList<WidgetItem>) : LocationsVS()
     class Error(val message: String?) : LocationsVS()
-    class ShowLoader(val showLoader: Boolean) : LocationsVS()
+    object ShowLoader : LocationsVS()
 }
