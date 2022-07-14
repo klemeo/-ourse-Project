@@ -1,6 +1,7 @@
 package com.example.courseprojectrickandmorty.app
 
 import com.example.courseprojectrickandmorty.ui.characters.CharactersViewModel
+import com.example.courseprojectrickandmorty.ui.episodes.EpisodesViewModel
 import com.example.data.ApiRepositoryImpl
 import com.example.data.PostResponseDataSource
 import com.example.data.db.*
@@ -60,6 +61,12 @@ private val viewModule = module {
     viewModel {
         CharactersViewModel(
             charactersInteractor = get()
+        )
+    }
+
+    viewModel {
+        EpisodesViewModel(
+            episodesInteractor = get()
         )
     }
 

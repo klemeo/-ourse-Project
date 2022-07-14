@@ -1,7 +1,40 @@
 package com.example.courseprojectrickandmorty.ui.episodes
 
-import androidx.fragment.app.Fragment
+import android.view.View
+import com.example.base.mvvm.MvvmScreen
 import com.example.courseprojectrickandmorty.R
+import com.example.courseprojectrickandmorty.state.EpisodesVS
+import com.example.courseprojectrickandmorty.widgets.ListWidget
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class EpisodesFragment : Fragment(R.layout.f_episodes) {
+class EpisodesFragment : MvvmScreen<EpisodesViewModel>(R.layout.f_episodes) {
+
+    override val viewModel: EpisodesViewModel by viewModel()
+
+    private var lvEpisodes: ListWidget? = null
+
+    override fun initView(view: View) {
+        lvEpisodes = view.findViewById(R.id.lvEpisodes)
+        observeViewModel()
+    }
+
+    private fun observeViewModel() {
+        viewModel.viewEpisodesState.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                is EpisodesVS.AddEpisodes -> {
+                    lvEpisodes?.setDataHideProgress(state.items)
+                }
+                is EpisodesVS.ShowLoader -> {
+                    handleScreenStateLoading()
+                }
+                is EpisodesVS.Error -> {
+
+                }
+            }
+        }
+    }
+
+    private fun handleScreenStateLoading() {
+        lvEpisodes?.setProgressAndItems(true)
+    }
 }
