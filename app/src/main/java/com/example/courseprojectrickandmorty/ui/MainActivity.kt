@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         tabAdapter = MainTabAdapter(supportFragmentManager)
-        vNavigate?.setOnNavigationItemSelectedListener {
+        vNavigate?.setOnItemSelectedListener {
             val position = TabBinder.getPositionByItemId(it.itemId)
             vpTabs?.setCurrentItem(position, false)
             true
