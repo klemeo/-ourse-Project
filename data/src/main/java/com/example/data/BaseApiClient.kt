@@ -1,5 +1,6 @@
 package com.example.data
 
+import com.localebro.okhttpprofiler.OkHttpProfilerInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -8,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 open class BaseApiClient<T>(private val classT: Class<T>) {
 
-    companion object{
+    companion object {
         const val CONNECTION_TIMEOUT: Long = 180L
         const val READ_TIMEOUT: Long = 180L
         const val WRITE_TIMEOUT: Long = 180L
@@ -23,6 +24,7 @@ open class BaseApiClient<T>(private val classT: Class<T>) {
             .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)
             .addInterceptor(httpLoggingInterceptor)
+            .addInterceptor(OkHttpProfilerInterceptor())
             .build()
 
         val retrofitBuilder = Retrofit.Builder().apply {

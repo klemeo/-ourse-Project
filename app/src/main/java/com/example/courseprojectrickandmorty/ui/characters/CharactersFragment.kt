@@ -5,6 +5,7 @@ import com.example.base.mvvm.MvvmScreen
 import com.example.courseprojectrickandmorty.R
 import com.example.courseprojectrickandmorty.state.CharactersVS
 import com.example.courseprojectrickandmorty.widgets.ListWidget
+import com.example.courseprojectrickandmorty.widgets.MyLoadMore
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CharactersFragment : MvvmScreen<CharactersViewModel>(R.layout.f_characters) {
@@ -16,6 +17,7 @@ class CharactersFragment : MvvmScreen<CharactersViewModel>(R.layout.f_characters
     override fun initView(view: View) {
         lvCharacters = view.findViewById(R.id.lvCharacters)
         observeViewModel()
+        onScrollListener()
     }
 
     private fun observeViewModel() {
@@ -36,5 +38,14 @@ class CharactersFragment : MvvmScreen<CharactersViewModel>(R.layout.f_characters
 
     private fun handleScreenStateLoading() {
         lvCharacters?.setProgressAndItems(true)
+    }
+
+    private fun onScrollListener() {
+        lvCharacters?.setLoad(object : MyLoadMore {
+            override fun onLoadMore() {
+                viewModel.getCharacters()
+            }
+        }
+        )
     }
 }

@@ -1,5 +1,6 @@
 package com.example.courseprojectrickandmorty.ui.characters
 
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,6 +9,7 @@ import com.example.base.utils.io
 import com.example.base.utils.ui
 import com.example.courseprojectrickandmorty.state.CharactersVS
 import com.example.courseprojectrickandmorty.ui.widget.CharacterItem
+import com.example.courseprojectrickandmorty.utils.pageCharacters
 import com.example.courseprojectrickandmorty.widgets.WidgetItem
 import com.example.domain.interactor.CharactersInteractor
 import com.example.domain.model.Characters
@@ -22,11 +24,13 @@ class CharactersViewModel(
 
     private val charactersMapper by lazy { CharacterMapper() }
 
+    private var page: Int? = null
+
     init {
         getCharacters()
     }
 
-    fun getCharacters(page: Int? = null) {
+    fun getCharacters() {
         viewModelScope.launch {
             try {
                 io {
@@ -52,6 +56,8 @@ class CharactersViewModel(
 
     private fun mapData(item: Characters): MutableList<WidgetItem> {
         val list = mutableListOf<WidgetItem>()
+
+        page = item.info?.next?.pageCharacters()
 
         item.results?.forEach {
             list.add(CharacterItem(charactersMapper.map(it).apply {
