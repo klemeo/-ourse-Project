@@ -2,7 +2,9 @@ package com.example.courseprojectrickandmorty.widgets
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
+import com.example.courseprojectrickandmorty.R
 
 class ItemRecyclerAdapter : RecyclerView.Adapter<ItemHolder>() {
 
@@ -26,6 +28,9 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<ItemHolder>() {
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
         holder.setData(itemList[position].itemData)
+        holder.itemView.animation =
+            AnimationUtils.loadAnimation(holder.itemView.context, R.anim.w_items_anims)
+
     }
 
     override fun getItemViewType(position: Int): Int = itemList[position].res
