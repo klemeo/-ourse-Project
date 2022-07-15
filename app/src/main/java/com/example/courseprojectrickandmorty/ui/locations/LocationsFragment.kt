@@ -24,7 +24,7 @@ class LocationsFragment : MvvmScreen<LocationsViewModel>(R.layout.f_locations) {
         viewModel.viewLocationsState.observe(viewLifecycleOwner) { state ->
             when (state) {
                 is LocationsVS.AddLocations -> {
-                    lvLocations?.setDataHideProgress(state.items)
+                    lvLocations?.setDataHideProgress(state.items, false, state.size)
                 }
                 is LocationsVS.ShowLoader -> {
                     handleScreenStateLoading()

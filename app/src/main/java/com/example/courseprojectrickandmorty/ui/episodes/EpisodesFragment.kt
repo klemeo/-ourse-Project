@@ -24,7 +24,7 @@ class EpisodesFragment : MvvmScreen<EpisodesViewModel>(R.layout.f_episodes) {
         viewModel.viewEpisodesState.observe(viewLifecycleOwner) { state ->
             when (state) {
                 is EpisodesVS.AddEpisodes -> {
-                    lvEpisodes?.setDataHideProgress(state.items)
+                    lvEpisodes?.setDataHideProgress(state.items, false, state.size)
                 }
                 is EpisodesVS.ShowLoader -> {
                     handleScreenStateLoading()

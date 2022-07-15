@@ -24,7 +24,7 @@ class CharactersFragment : MvvmScreen<CharactersViewModel>(R.layout.f_characters
         viewModel.viewCharactersState.observe(viewLifecycleOwner) { state ->
             when (state) {
                 is CharactersVS.AddCharacters -> {
-                    lvCharacters?.setDataHideProgress(state.items)
+                    lvCharacters?.setDataHideProgress(state.items, false, state.size)
                 }
                 is CharactersVS.ShowLoader -> {
                     handleScreenStateLoading()

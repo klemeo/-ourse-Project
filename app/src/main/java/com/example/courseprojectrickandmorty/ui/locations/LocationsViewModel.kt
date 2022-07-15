@@ -41,7 +41,7 @@ class LocationsViewModel(
                         .collect {
                             ui {
                                 _viewLocationsState.value =
-                                    LocationsVS.AddLocations(mapData(it))
+                                    LocationsVS.AddLocations(mapData(it), it.info?.count ?: 100)
                             }
                         }
                 }

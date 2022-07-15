@@ -16,6 +16,9 @@ class ListWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context
     private val progressView: ProgressBar
 
     private var loadMore: MyLoadMore? = null
+    private var isLoading = false
+
+    private var listSize: Int = 1
 
     init {
         inflate(context, R.layout.w_list, this)
@@ -32,8 +35,17 @@ class ListWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context
         this.loadMore = loadMore
     }
 
-    fun setDataHideProgress(list: MutableList<WidgetItem>) {
-        setData(list)
+    private fun startLoading() {
+        isLoading = true
+    }
+
+    private fun setLoaded() {
+        isLoading = false
+    }
+
+    fun setDataHideProgress(list: MutableList<WidgetItem>, clear: Boolean = true, size: Int = 1) {
+        this.listSize = size
+        setData(list, clear)
         setProgress(false)
     }
 
@@ -42,9 +54,16 @@ class ListWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context
         progressView goneIf !progress
     }
 
-    private fun setData(list: MutableList<WidgetItem>) {
-        items.removeAllViews()
-        itemRecyclerAdapter.updateItems(list)
+    private fun setData(list: MutableList<WidgetItem>, clear: Boolean) {
+        with(itemRecyclerAdapter) {
+            if (clear) {
+                removeAllViews()
+                updateItems(list)
+            } else {
+                addItems(list)
+                setLoaded()
+            }
+        }
         items goneIf (list.size == 0)
     }
 
@@ -59,10 +78,14 @@ class ListWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
 
-                val totalItemCount = layoutManager.itemCount
+                val itemCount = layoutManager.itemCount
                 val lastVisibleItem = layoutManager.findLastVisibleItemPosition()
-                if (totalItemCount == lastVisibleItem +1 ) {
-                    loadMore?.onLoadMore()
+
+                if (!isLoading && itemCount != listSize) {
+                    if (itemCount < lastVisibleItem + 10) {
+                        startLoading()
+                        loadMore?.onLoadMore()
+                    }
                 }
             }
         })

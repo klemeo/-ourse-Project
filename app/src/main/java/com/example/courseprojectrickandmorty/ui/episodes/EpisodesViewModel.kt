@@ -41,7 +41,7 @@ class EpisodesViewModel(
                         .collect {
                             ui {
                                 _viewEpisodesState.value =
-                                    EpisodesVS.AddEpisodes(mapData(it))
+                                    EpisodesVS.AddEpisodes(mapData(it), it.info?.count ?: 100)
                             }
                         }
                 }

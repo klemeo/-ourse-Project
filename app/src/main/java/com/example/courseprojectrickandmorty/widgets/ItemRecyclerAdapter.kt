@@ -10,10 +10,15 @@ class ItemRecyclerAdapter : RecyclerView.Adapter<ItemHolder>() {
 
     private var itemList = mutableListOf<WidgetItem>()
 
-    fun updateItems(widgetItemList: MutableList<WidgetItem>) {
+    fun updateItems(items: MutableList<WidgetItem>) {
         this.itemList.clear()
-        this.itemList.addAll(widgetItemList)
+        this.itemList.addAll(items)
         notifyDataSetChanged()
+    }
+
+    fun addItems(items: MutableList<WidgetItem>) {
+        this.itemList.addAll(items)
+        notifyItemInserted(this.itemCount)
     }
 
     fun removeItem(widgetItem: WidgetItem) {

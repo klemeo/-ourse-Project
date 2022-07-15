@@ -42,7 +42,7 @@ class CharactersViewModel(
                         .collect {
                             ui {
                                 _viewCharactersState.value =
-                                    CharactersVS.AddCharacters(mapData(it))
+                                    CharactersVS.AddCharacters(mapData(it), it.info?.count ?: 100)
                             }
                         }
                 }
