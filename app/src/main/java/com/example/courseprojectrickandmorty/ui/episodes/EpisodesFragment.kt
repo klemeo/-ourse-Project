@@ -16,6 +16,7 @@ class EpisodesFragment : MvvmScreen<EpisodesViewModel>(R.layout.f_episodes) {
 
     override fun initView(view: View) {
         lvEpisodes = view.findViewById(R.id.lvEpisodes)
+        lvEpisodes?.toGrid(2)
         observeViewModel()
         onScrollListener()
     }

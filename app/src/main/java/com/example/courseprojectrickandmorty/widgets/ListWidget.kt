@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import android.widget.ProgressBar
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.courseprojectrickandmorty.R
@@ -91,8 +92,9 @@ class ListWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context
         })
     }
 
-}
+    fun toGrid(value: Int) {
+        val layoutManager = GridLayoutManager(context, value)
+        items.layoutManager = layoutManager
+    }
 
-interface MyLoadMore {
-    fun onLoadMore()
 }

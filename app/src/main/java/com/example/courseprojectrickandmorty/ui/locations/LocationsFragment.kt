@@ -16,6 +16,7 @@ class LocationsFragment : MvvmScreen<LocationsViewModel>(R.layout.f_locations) {
 
     override fun initView(view: View) {
         lvLocations = view.findViewById(R.id.lvLocations)
+        lvLocations?.toGrid(2)
         observeViewModel()
         onScrollListener()
     }

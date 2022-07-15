@@ -5,16 +5,48 @@
     android:id="@+id/cvItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:minHeight="100dp"
     android:orientation="vertical"
     android:padding="16dp"
+    app:cardCornerRadius="16dp"
     app:cardUseCompatPadding="true">
 
-    <TextView
-        android:id="@+id/tvText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        tools:text="Any Text" />
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/almendra_sc"
+            android:gravity="center"
+            android:textColor="@color/black"
+            tools:text="Any Text" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/bangers"
+            android:gravity="center"
+            android:textColor="@color/black"
+            tools:text="Any Text" />
+
+        <TextView
+            android:id="@+id/tvEpisode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/bangers"
+            android:gravity="center"
+            android:textColor="@color/black"
+            tools:text="Any Text" />
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

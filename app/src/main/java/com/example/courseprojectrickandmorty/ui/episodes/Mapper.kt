@@ -8,7 +8,9 @@ class EpisodeMapper : Mapper<Episode, TextPresModel> {
 
     override fun map(origin: Episode) = TextPresModel(
         id = origin.id ?: 0,
-        text = origin.name ?: ""
+        text = origin.name,
+        date = origin.airDate,
+        episode = origin.episode
     )
 
 }
