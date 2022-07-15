@@ -8,6 +8,7 @@ import com.example.base.utils.io
 import com.example.base.utils.ui
 import com.example.courseprojectrickandmorty.state.EpisodesVS
 import com.example.courseprojectrickandmorty.ui.widget.TextItem
+import com.example.courseprojectrickandmorty.utils.pageEpisodes
 import com.example.courseprojectrickandmorty.widgets.WidgetItem
 import com.example.domain.interactor.EpisodesInteractor
 import com.example.domain.model.Episodes
@@ -22,11 +23,13 @@ class EpisodesViewModel(
 
     private val episodeMapper by lazy { EpisodeMapper() }
 
+    private var page: Int? = null
+
     init {
         getEpisodes()
     }
 
-    fun getEpisodes(page: Int? = null) {
+    fun getEpisodes() {
         viewModelScope.launch {
             try {
                 io {
@@ -52,6 +55,8 @@ class EpisodesViewModel(
 
     private fun mapData(item: Episodes): MutableList<WidgetItem> {
         val list = mutableListOf<WidgetItem>()
+
+        page = item.info?.next?.pageEpisodes()
 
         item.results?.forEach {
             list.add(TextItem(episodeMapper.map(it).apply {

@@ -8,6 +8,7 @@ import com.example.base.utils.io
 import com.example.base.utils.ui
 import com.example.courseprojectrickandmorty.state.LocationsVS
 import com.example.courseprojectrickandmorty.ui.widget.TextItem
+import com.example.courseprojectrickandmorty.utils.pageLocations
 import com.example.courseprojectrickandmorty.widgets.WidgetItem
 import com.example.domain.interactor.LocationsInteractor
 import com.example.domain.model.Locations
@@ -22,11 +23,13 @@ class LocationsViewModel(
 
     private val locationMapper by lazy { LocationMapper() }
 
+    private var page: Int? = null
+
     init {
         getLocations()
     }
 
-    fun getLocations(page: Int? = null) {
+    fun getLocations() {
         viewModelScope.launch {
             try {
                 io {
@@ -52,6 +55,8 @@ class LocationsViewModel(
 
     private fun mapData(item: Locations): MutableList<WidgetItem> {
         val list = mutableListOf<WidgetItem>()
+
+        page = item.info?.next?.pageLocations()
 
         item.results?.forEach {
             list.add(TextItem(locationMapper.map(it).apply {
