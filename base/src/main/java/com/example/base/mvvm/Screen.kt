@@ -17,6 +17,12 @@ abstract class Screen(
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        with(view) {
+            //Надо, чтобы экраны не "прокликивались насквозь"
+            setOnTouchListener { _, _ -> true }
+        }
+
         initView(view)
     }
 
