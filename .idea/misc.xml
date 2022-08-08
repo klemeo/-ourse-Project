@@ -14,9 +14,11 @@
         <entry key="app/src/main/res/layout/f_episodes.xml" value="0.425" />
         <entry key="app/src/main/res/layout/f_locations.xml" value="0.4239583333333333" />
         <entry key="app/src/main/res/layout/i_character.xml" value="0.2135258358662614" />
+        <entry key="app/src/main/res/layout/i_text.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/item_character.xml" value="0.4239583333333333" />
         <entry key="app/src/main/res/layout/w_character.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/w_list.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/w_text.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.23177083333333334" />
         <entry key="base/src/main/res/font/almendra_sc.xml" value="0.278125" />
         <entry key="base/src/main/res/font/bangers.xml" value="0.278125" />
