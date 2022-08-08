@@ -7,6 +7,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.viewpager.widget.ViewPager
 import com.example.courseprojectrickandmorty.R
+import com.example.courseprojectrickandmorty.ui.TabBinder.START_POSITION
+import com.example.courseprojectrickandmorty.ui.TabBinder.TABS_COUNT
+import com.example.courseprojectrickandmorty.ui.TabBinder.getPositionByItem
+import com.example.courseprojectrickandmorty.ui.TabBinder.getPositionByItemId
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -30,20 +34,29 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         tabAdapter = MainTabAdapter(supportFragmentManager)
         vNavigate?.setOnItemSelectedListener {
-            val position = TabBinder.getPositionByItemId(it.itemId)
+            val position = getPositionByItemId(it.itemId)
             vpTabs?.setCurrentItem(position, false)
             true
         }
         vpTabs?.apply {
-            offscreenPageLimit = TabBinder.TABS_COUNT
+            offscreenPageLimit = TABS_COUNT
             adapter = tabAdapter
-            setCurrentItem(TabBinder.START_POSITION, false)
+            setCurrentItem(START_POSITION, false)
+            addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener() {
+
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    vNavigate?.selectedItemId = getPositionByItem(position)
+                }
+
+            })
         }
     }
 
     private fun makeStatusBarLight() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            window.decorView.systemUiVisibility =
+                window.decorView.systemUiVisibility or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
             window.statusBarColor = Color.WHITE
         }
     }

@@ -28,4 +28,11 @@ object TabBinder {
         POSITION_EPISODES -> EpisodesFragment()
         else -> throw IllegalAccessException("Unknown position: $position")
     }
+
+    fun getPositionByItem(position: Int) = when (position) {
+        POSITION_LOCATIONS -> R.id.f_locations
+        POSITION_CHARACTERS -> R.id.f_characters
+        POSITION_EPISODES -> R.id.f_episodes
+        else -> throw IllegalAccessException("Unknown position: $position")
+    }
 }
