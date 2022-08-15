@@ -9,7 +9,7 @@ import com.example.base.utils.ui
 import com.example.courseprojectrickandmorty.state.EpisodesVS
 import com.example.courseprojectrickandmorty.ui.widget.TextItem
 import com.example.courseprojectrickandmorty.utils.pageEpisodes
-import com.example.courseprojectrickandmorty.widgets.WidgetItem
+import com.friendly.universal_recycler.WidgetItem
 import com.example.domain.interactor.EpisodesInteractor
 import com.example.domain.model.Episodes
 import kotlinx.coroutines.launch

@@ -1,10 +1,9 @@
-package com.example.courseprojectrickandmorty.widgets
+package com.friendly.universal_recycler
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
-import com.example.courseprojectrickandmorty.R
 
 class ItemRecyclerAdapter : RecyclerView.Adapter<ItemHolder>() {
 

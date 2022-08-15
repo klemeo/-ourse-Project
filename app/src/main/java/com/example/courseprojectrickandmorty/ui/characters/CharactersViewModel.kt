@@ -1,6 +1,5 @@
 package com.example.courseprojectrickandmorty.ui.characters
 
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,7 +9,7 @@ import com.example.base.utils.ui
 import com.example.courseprojectrickandmorty.state.CharactersVS
 import com.example.courseprojectrickandmorty.ui.widget.CharacterItem
 import com.example.courseprojectrickandmorty.utils.pageCharacters
-import com.example.courseprojectrickandmorty.widgets.WidgetItem
+import com.friendly.universal_recycler.WidgetItem
 import com.example.domain.interactor.CharactersInteractor
 import com.example.domain.model.Characters
 import kotlinx.coroutines.launch

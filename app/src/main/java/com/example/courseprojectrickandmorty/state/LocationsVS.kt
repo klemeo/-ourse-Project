@@ -1,6 +1,6 @@
 package com.example.courseprojectrickandmorty.state
 
-import com.example.courseprojectrickandmorty.widgets.WidgetItem
+import com.friendly.universal_recycler.WidgetItem
 
 sealed class LocationsVS {
     class AddLocations(val items: MutableList<WidgetItem>, val size: Int) : LocationsVS()

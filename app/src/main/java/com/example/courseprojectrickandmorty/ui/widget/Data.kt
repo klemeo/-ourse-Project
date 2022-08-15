@@ -1,6 +1,6 @@
 package com.example.courseprojectrickandmorty.ui.widget
 
-import com.example.courseprojectrickandmorty.widgets.ItemData
+import com.friendly.universal_recycler.ItemData
 
 class TextPresModel(
     val id: Int,

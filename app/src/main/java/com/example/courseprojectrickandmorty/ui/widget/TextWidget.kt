@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.courseprojectrickandmorty.R
 import com.example.courseprojectrickandmorty.utils.goneIf
-import com.example.courseprojectrickandmorty.widgets.ItemData
-import com.example.courseprojectrickandmorty.widgets.Widget
+import com.friendly.universal_recycler.ItemData
+import com.friendly.universal_recycler.Widget
 
 class TextWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context, attrs),
     Widget {

@@ -9,7 +9,7 @@ import com.example.base.utils.ui
 import com.example.courseprojectrickandmorty.state.LocationsVS
 import com.example.courseprojectrickandmorty.ui.widget.TextItem
 import com.example.courseprojectrickandmorty.utils.pageLocations
-import com.example.courseprojectrickandmorty.widgets.WidgetItem
+import com.friendly.universal_recycler.WidgetItem
 import com.example.domain.interactor.LocationsInteractor
 import com.example.domain.model.Locations
 import kotlinx.coroutines.launch

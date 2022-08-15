@@ -1,8 +1,7 @@
-package com.example.courseprojectrickandmorty.widgets
+package com.friendly.universal_recycler
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.courseprojectrickandmorty.R
 
 open class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     open fun setData(item: ItemData) {

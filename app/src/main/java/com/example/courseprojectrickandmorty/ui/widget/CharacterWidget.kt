@@ -7,8 +7,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.bumptech.glide.Glide
-import com.example.courseprojectrickandmorty.widgets.ItemData
-import com.example.courseprojectrickandmorty.widgets.Widget
+import com.friendly.universal_recycler.ItemData
+import com.friendly.universal_recycler.Widget
 import com.example.courseprojectrickandmorty.R
 import com.example.courseprojectrickandmorty.ui.characters.CharacterPresModel
 import com.example.courseprojectrickandmorty.utils.getColorGreen

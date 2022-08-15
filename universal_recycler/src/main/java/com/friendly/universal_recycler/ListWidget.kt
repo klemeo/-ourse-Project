@@ -1,4 +1,4 @@
-package com.example.courseprojectrickandmorty.widgets
+package com.friendly.universal_recycler
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,8 +7,7 @@ import android.widget.ProgressBar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.courseprojectrickandmorty.R
-import com.example.courseprojectrickandmorty.utils.goneIf
+import com.friendly.universal_recycler.utils.goneIf
 
 class ListWidget(context: Context?, attrs: AttributeSet?) : LinearLayout(context, attrs) {
 
