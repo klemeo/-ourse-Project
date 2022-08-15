@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             offscreenPageLimit = TABS_COUNT
             adapter = tabAdapter
             setCurrentItem(START_POSITION, false)
+            vNavigate?.selectedItemId = getPositionByItem(START_POSITION)
             addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener() {
 
                 override fun onPageSelected(position: Int) {
