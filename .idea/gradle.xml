@@ -14,7 +14,7 @@
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/universal_recycler" />
+            <option value="$PROJECT_DIR$/list_widget" />
           </set>
         </option>
       </GradleProjectSettings>
