@@ -1,7 +1,6 @@
-package com.example.data
+package com.example.domain
 
 import com.example.data.mapper.*
-import com.example.domain.ApiRepository
 import kotlinx.coroutines.flow.Flow
 import com.example.base.models.Characters
 import com.example.base.models.Character
@@ -9,6 +8,7 @@ import com.example.base.models.Episodes
 import com.example.base.models.Episode
 import com.example.base.models.Locations
 import com.example.base.models.Location
+import com.example.data.PostResponseDataSource
 import kotlinx.coroutines.flow.map
 
 class ApiRepositoryImpl(

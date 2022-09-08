@@ -1,0 +1,29 @@
+ext {
+    retrofitVersion = '2.9.0'
+    roomVersion = '2.4.3'
+    koinVersion = '3.2.0'
+    glideVersion = '4.13.2'
+    coroutinesersion = '1.6.3'
+    lifecycleVersion = '2.5.1'
+
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    retrofitConverter = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    koinCore = "io.insert-koin:koin-core:$koinVersion"
+    koinAndroid = "io.insert-koin:koin-android:$koinVersion"
+
+    room = "androidx.room:room-runtime:$roomVersion"
+    roomKtx = "androidx.room:room-ktx:$roomVersion"
+    roomCompiler = "androidx.room:room-compiler:$roomVersion"
+
+    glide = "com.github.bumptech.glide:glide:$glideVersion"
+
+    coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesersion"
+    coroutinesAdnroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesersion"
+
+    lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
+    lifecycleViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    lifecycleLivedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    lifecycleCommon = "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+}
