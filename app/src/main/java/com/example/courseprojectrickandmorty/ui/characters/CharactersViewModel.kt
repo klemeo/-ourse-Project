@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.base.utils.io
 import com.example.base.utils.ui
-import com.example.courseprojectrickandmorty.state.CharactersVS
 import com.example.courseprojectrickandmorty.ui.widget.CharacterItem
 import com.example.courseprojectrickandmorty.utils.pageCharacters
 import com.friendly.universal_recycler.WidgetItem
@@ -20,8 +19,6 @@ class CharactersViewModel(
 
     private val _viewCharactersState = MutableLiveData<CharactersVS>(CharactersVS.ShowLoader)
     val viewCharactersState: LiveData<CharactersVS> = _viewCharactersState
-
-    private val charactersMapper by lazy { CharacterMapper() }
 
     private var page: Int? = null
 
@@ -41,7 +38,7 @@ class CharactersViewModel(
                         .collect {
                             ui {
                                 _viewCharactersState.value =
-                                    CharactersVS.AddCharacters(mapData(it), it.info?.count ?: 100)
+                                    CharactersVS.Content(mapData(it), it.info?.count ?: 100)
                             }
                         }
                 }
@@ -59,7 +56,7 @@ class CharactersViewModel(
         page = item.info?.next?.pageCharacters()
 
         item.results?.forEach {
-            list.add(CharacterItem(charactersMapper.map(it).apply {
+            list.add(CharacterItem(it.map().apply {
                 onClick = {
 
                 }

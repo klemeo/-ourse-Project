@@ -1,16 +1,11 @@
 package com.example.courseprojectrickandmorty.ui.episodes
 
-import com.example.base.mapper.Mapper
 import com.example.courseprojectrickandmorty.ui.widget.TextPresModel
 import com.example.domain.model.Episode
 
-class EpisodeMapper : Mapper<Episode, TextPresModel> {
-
-    override fun map(origin: Episode) = TextPresModel(
-        id = origin.id ?: 0,
-        text = origin.name,
-        date = origin.airDate,
-        episode = origin.episode
-    )
-
-}
+fun Episode.map() = TextPresModel(
+    id = id ?: 0,
+    text = name,
+    date = airDate,
+    episode = episode
+)

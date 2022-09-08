@@ -10,3 +10,14 @@ class TextPresModel(
 ) : ItemData {
     var onClick: (TextPresModel) -> Unit = {}
 }
+
+class CharacterPresModel(
+    val id: Int,
+    val name: String,
+    val image: String,
+    val location: String,
+    val origin: String,
+    val status: String,
+) : ItemData {
+    var onClick: (CharacterPresModel) -> Unit = {}
+}

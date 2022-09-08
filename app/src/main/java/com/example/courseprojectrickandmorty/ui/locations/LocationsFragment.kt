@@ -3,7 +3,6 @@ package com.example.courseprojectrickandmorty.ui.locations
 import android.view.View
 import com.example.base.mvvm.MvvmScreen
 import com.example.courseprojectrickandmorty.R
-import com.example.courseprojectrickandmorty.state.LocationsVS
 import com.friendly.universal_recycler.ListWidget
 import com.friendly.universal_recycler.MyLoadMore
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -24,7 +23,7 @@ class LocationsFragment : MvvmScreen<LocationsViewModel>(R.layout.f_locations) {
     private fun observeViewModel() {
         viewModel.viewLocationsState.observe(viewLifecycleOwner) { state ->
             when (state) {
-                is LocationsVS.AddLocations -> {
+                is LocationsVS.Content -> {
                     lvLocations?.setDataHideProgress(state.items, false, state.size)
                 }
                 is LocationsVS.ShowLoader -> {
@@ -46,7 +45,6 @@ class LocationsFragment : MvvmScreen<LocationsViewModel>(R.layout.f_locations) {
             override fun onLoadMore() {
                 viewModel.getLocations()
             }
-        }
-        )
+        })
     }
 }

@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.base.utils.io
 import com.example.base.utils.ui
-import com.example.courseprojectrickandmorty.state.EpisodesVS
 import com.example.courseprojectrickandmorty.ui.widget.TextItem
 import com.example.courseprojectrickandmorty.utils.pageEpisodes
 import com.friendly.universal_recycler.WidgetItem
@@ -20,8 +19,6 @@ class EpisodesViewModel(
 
     private val _viewEpisodesState = MutableLiveData<EpisodesVS>(EpisodesVS.ShowLoader)
     val viewEpisodesState: LiveData<EpisodesVS> = _viewEpisodesState
-
-    private val episodeMapper by lazy { EpisodeMapper() }
 
     private var page: Int? = null
 
@@ -41,7 +38,7 @@ class EpisodesViewModel(
                         .collect {
                             ui {
                                 _viewEpisodesState.value =
-                                    EpisodesVS.AddEpisodes(mapData(it), it.info?.count ?: 100)
+                                    EpisodesVS.Content(mapData(it), it.info?.count ?: 100)
                             }
                         }
                 }
@@ -59,7 +56,7 @@ class EpisodesViewModel(
         page = item.info?.next?.pageEpisodes()
 
         item.results?.forEach {
-            list.add(TextItem(episodeMapper.map(it).apply {
+            list.add(TextItem(it.map().apply {
                 onClick = {
 
                 }

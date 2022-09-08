@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.base.utils.io
 import com.example.base.utils.ui
-import com.example.courseprojectrickandmorty.state.LocationsVS
 import com.example.courseprojectrickandmorty.ui.widget.TextItem
 import com.example.courseprojectrickandmorty.utils.pageLocations
 import com.friendly.universal_recycler.WidgetItem
@@ -20,8 +19,6 @@ class LocationsViewModel(
 
     private val _viewLocationsState = MutableLiveData<LocationsVS>()
     val viewLocationsState: LiveData<LocationsVS> = _viewLocationsState
-
-    private val locationMapper by lazy { LocationMapper() }
 
     private var page: Int? = null
 
@@ -41,7 +38,7 @@ class LocationsViewModel(
                         .collect {
                             ui {
                                 _viewLocationsState.value =
-                                    LocationsVS.AddLocations(mapData(it), it.info?.count ?: 100)
+                                    LocationsVS.Content(mapData(it), it.info?.count ?: 100)
                             }
                         }
                 }
@@ -59,7 +56,7 @@ class LocationsViewModel(
         page = item.info?.next?.pageLocations()
 
         item.results?.forEach {
-            list.add(TextItem(locationMapper.map(it).apply {
+            list.add(TextItem(it.map().apply {
                 onClick = {
 
                 }

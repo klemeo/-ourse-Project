@@ -3,7 +3,6 @@ package com.example.courseprojectrickandmorty.ui.episodes
 import android.view.View
 import com.example.base.mvvm.MvvmScreen
 import com.example.courseprojectrickandmorty.R
-import com.example.courseprojectrickandmorty.state.EpisodesVS
 import com.friendly.universal_recycler.ListWidget
 import com.friendly.universal_recycler.MyLoadMore
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -24,7 +23,7 @@ class EpisodesFragment : MvvmScreen<EpisodesViewModel>(R.layout.f_episodes) {
     private fun observeViewModel() {
         viewModel.viewEpisodesState.observe(viewLifecycleOwner) { state ->
             when (state) {
-                is EpisodesVS.AddEpisodes -> {
+                is EpisodesVS.Content -> {
                     lvEpisodes?.setDataHideProgress(state.items, false, state.size)
                 }
                 is EpisodesVS.ShowLoader -> {

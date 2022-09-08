@@ -1,17 +1,13 @@
 package com.example.courseprojectrickandmorty.ui.characters
 
-import com.example.base.mapper.Mapper
+import com.example.courseprojectrickandmorty.ui.widget.CharacterPresModel
 import com.example.domain.model.Character
 
-class CharacterMapper : Mapper<Character, CharacterPresModel> {
-
-    override fun map(origin: Character) = CharacterPresModel(
-        id = origin.id ?: 0,
-        name = origin.name ?: "",
-        image = origin.image ?: "",
-        location = origin.location?.name ?: "",
-        origin = origin.origin?.name ?: "",
-        status = origin.status ?: ""
-    )
-
-}
+fun Character.map() = CharacterPresModel(
+    id = id ?: 0,
+    name = name ?: "",
+    image = image ?: "",
+    location = location?.name ?: "",
+    origin = origin?.name ?: "",
+    status = status ?: ""
+)
