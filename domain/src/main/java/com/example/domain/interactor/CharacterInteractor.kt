@@ -3,7 +3,7 @@ package com.example.domain.interactor
 import com.example.base.interactor.Interactor
 import kotlinx.coroutines.flow.Flow
 import com.example.domain.ApiRepository
-import com.example.domain.model.Character
+import com.example.base.models.Character
 
 class CharacterInteractor(
     private val apiRepository: ApiRepository

@@ -1,7 +1,7 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
-import com.example.domain.model.Location
+import com.example.base.models.Location
 import com.example.data.model.responses.LocationResponse
 
 class LocationDataMapper :

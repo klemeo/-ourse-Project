@@ -25,6 +25,9 @@
         <entry key="base/src/main/res/font/bangers.xml" value="0.278125" />
         <entry key="base/src/main/res/layout/w_character.xml" value="0.24791666666666667" />
         <entry key="base/src/main/res/layout/w_list.xml" value="0.4390625" />
+        <entry key="base/src/main/res/layout/w_text.xml" value="0.14814814814814814" />
+        <entry key="characters/src/main/res/layout/f_characters.xml" value="0.3591485507246377" />
+        <entry key="characters/src/main/res/layout/w_character.xml" value="0.3591485507246377" />
         <entry key="universal_recycler/src/main/res/layout/w_list.xml" value="0.3591485507246377" />
         <entry key="universal_recycler/src/main/res/layout/widget.xml" value="0.3591485507246377" />
       </map>

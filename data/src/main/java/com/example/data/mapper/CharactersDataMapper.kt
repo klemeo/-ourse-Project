@@ -1,8 +1,8 @@
 package com.example.data.mapper
 
 import com.example.base.mapper.Mapper
+import com.example.base.models.*
 import com.example.data.model.responses.CharactersResponse
-import com.example.domain.model.*
 
 class CharactersDataMapper :
     Mapper<CharactersResponse, Characters> {

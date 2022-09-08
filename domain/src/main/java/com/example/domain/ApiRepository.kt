@@ -1,6 +1,6 @@
 package com.example.domain
 
-import com.example.domain.model.*
+import com.example.base.models.*
 import kotlinx.coroutines.flow.Flow
 
 interface ApiRepository {

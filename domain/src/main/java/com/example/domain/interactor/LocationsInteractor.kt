@@ -1,7 +1,7 @@
 package com.example.domain.interactor
 
 import com.example.base.interactor.Interactor
-import com.example.domain.model.Locations
+import com.example.base.models.Locations
 import kotlinx.coroutines.flow.Flow
 import com.example.domain.ApiRepository
 

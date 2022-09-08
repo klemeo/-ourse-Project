@@ -1,6 +1,6 @@
 package com.example.courseprojectrickandmorty.state
 
-import com.example.domain.model.Episode
+import com.example.base.models.Episode
 
 sealed class EpisodeVS {
 

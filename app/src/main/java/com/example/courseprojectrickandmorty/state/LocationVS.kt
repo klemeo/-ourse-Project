@@ -1,6 +1,6 @@
 package com.example.courseprojectrickandmorty.state
 
-import com.example.domain.model.Location
+import com.example.base.models.Location
 
 sealed class LocationVS {
 

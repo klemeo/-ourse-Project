@@ -4,13 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.base.mapper.map
 import com.example.base.utils.io
 import com.example.base.utils.ui
-import com.example.courseprojectrickandmorty.ui.widget.TextItem
+import com.example.courseprojectrickandmorty.ui.TextItem
 import com.example.courseprojectrickandmorty.utils.pageLocations
 import com.friendly.universal_recycler.WidgetItem
 import com.example.domain.interactor.LocationsInteractor
-import com.example.domain.model.Locations
+import com.example.base.models.Locations
 import kotlinx.coroutines.launch
 
 class LocationsViewModel(
