@@ -3,7 +3,7 @@ package com.example.courseprojectrickandmorty.ui
 import androidx.fragment.app.Fragment
 import com.example.courseprojectrickandmorty.R
 import com.example.characters.CharactersFragment
-import com.example.courseprojectrickandmorty.ui.episodes.EpisodesFragment
+import com.example.episodes.EpisodesFragment
 import com.example.courseprojectrickandmorty.ui.locations.LocationsFragment
 
 object TabBinder {

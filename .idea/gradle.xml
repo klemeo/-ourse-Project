@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/characters" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/episodes" />
             <option value="$PROJECT_DIR$/list_widget" />
           </set>
         </option>
