@@ -1,13 +1,14 @@
 package com.example.courseprojectrickandmorty.app
 
 import com.example.characters.charactersModule
-import com.example.courseprojectrickandmorty.ui.locations.LocationsViewModel
+import com.example.locations.LocationsViewModel
 import com.example.data.ApiRepositoryImpl
 import com.example.data.PostResponseDataSource
 import com.example.data.db.*
 import com.example.domain.ApiRepository
 import com.example.domain.interactor.*
 import com.example.episodes.episodesModule
+import com.example.locations.locationsModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -57,17 +58,6 @@ private val postModule = module {
 
 }
 
-private val viewModule = module {
-
-
-    viewModel {
-        LocationsViewModel(
-            locationsInteractor = get()
-        )
-    }
-
-}
-
 private val databaseModule = module {
 
     single {
@@ -87,4 +77,4 @@ private val databaseModule = module {
     }
 }
 
-val modules = listOf(postModule, databaseModule, viewModule, charactersModule, episodesModule)
+val modules = listOf(postModule, databaseModule, locationsModule, charactersModule, episodesModule)

@@ -1,4 +1,4 @@
-package com.example.courseprojectrickandmorty.ui.locations
+package com.example.locations
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.base.mapper.map
 import com.example.base.utils.io
 import com.example.base.utils.ui
-import com.example.courseprojectrickandmorty.ui.TextItem
 import com.example.courseprojectrickandmorty.utils.pageLocations
 import com.friendly.universal_recycler.WidgetItem
 import com.example.domain.interactor.LocationsInteractor

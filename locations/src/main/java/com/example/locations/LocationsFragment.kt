@@ -1,8 +1,7 @@
-package com.example.courseprojectrickandmorty.ui.locations
+package com.example.locations
 
 import android.view.View
 import com.example.base.mvvm.MvvmScreen
-import com.example.courseprojectrickandmorty.R
 import com.friendly.universal_recycler.ListWidget
 import com.friendly.universal_recycler.MyLoadMore
 import org.koin.androidx.viewmodel.ext.android.viewModel

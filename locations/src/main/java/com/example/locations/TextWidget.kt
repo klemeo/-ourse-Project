@@ -1,4 +1,4 @@
-package com.example.courseprojectrickandmorty.ui
+package com.example.locations
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,7 +6,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.base.models.TextPresModel
-import com.example.courseprojectrickandmorty.R
 import com.example.courseprojectrickandmorty.utils.goneIf
 import com.friendly.universal_recycler.ItemData
 import com.friendly.universal_recycler.Widget

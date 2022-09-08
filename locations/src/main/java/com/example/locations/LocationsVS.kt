@@ -1,4 +1,4 @@
-package com.example.courseprojectrickandmorty.ui.locations
+package com.example.locations
 
 import com.friendly.universal_recycler.WidgetItem
 
