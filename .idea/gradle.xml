@@ -12,11 +12,14 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/character" />
             <option value="$PROJECT_DIR$/characters" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/episode" />
             <option value="$PROJECT_DIR$/episodes" />
             <option value="$PROJECT_DIR$/list_widget" />
+            <option value="$PROJECT_DIR$/location" />
             <option value="$PROJECT_DIR$/locations" />
             <option value="$PROJECT_DIR$/main" />
           </set>

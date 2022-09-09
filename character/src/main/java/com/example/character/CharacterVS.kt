@@ -1,4 +1,4 @@
-package com.example.courseprojectrickandmorty.state
+package com.example.character
 
 import com.example.base.models.Character
 
