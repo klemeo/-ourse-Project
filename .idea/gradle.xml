@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/episodes" />
             <option value="$PROJECT_DIR$/list_widget" />
             <option value="$PROJECT_DIR$/locations" />
+            <option value="$PROJECT_DIR$/main" />
           </set>
         </option>
       </GradleProjectSettings>

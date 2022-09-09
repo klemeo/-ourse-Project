@@ -1,4 +1,4 @@
-package com.example.courseprojectrickandmorty.ui
+package com.example.main
 
 import android.graphics.Color
 import android.os.Build
@@ -6,11 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.viewpager.widget.ViewPager
-import com.example.courseprojectrickandmorty.R
-import com.example.courseprojectrickandmorty.ui.TabBinder.START_POSITION
-import com.example.courseprojectrickandmorty.ui.TabBinder.TABS_COUNT
-import com.example.courseprojectrickandmorty.ui.TabBinder.getPositionByItem
-import com.example.courseprojectrickandmorty.ui.TabBinder.getPositionByItemId
+import com.example.main.TabBinder.START_POSITION
+import com.example.main.TabBinder.TABS_COUNT
+import com.example.main.TabBinder.getPositionByItem
+import com.example.main.TabBinder.getPositionByItemId
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.courseprojectrickandmorty.ui
+package com.example.main
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

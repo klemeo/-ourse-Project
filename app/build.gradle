@@ -65,5 +65,6 @@ dependencies {
     implementation project(':characters')
     implementation project(':episodes')
     implementation project(':locations')
+    implementation project(':main')
 
 }

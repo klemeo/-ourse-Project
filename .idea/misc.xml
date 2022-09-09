@@ -33,6 +33,9 @@
         <entry key="episodes/src/main/res/layout/i_text.xml" value="0.1" />
         <entry key="locations/src/main/res/layout/f_locations.xml" value="0.1" />
         <entry key="locations/src/main/res/layout/w_text.xml" value="0.1" />
+        <entry key="main/src/main/res/layout/activity_main.xml" value="0.4401041666666667" />
+        <entry key="main/src/main/res/menu/a.xml" value="0.4390625" />
+        <entry key="main/src/main/res/menu/bottom_menu.xml" value="0.45416666666666666" />
         <entry key="universal_recycler/src/main/res/layout/w_list.xml" value="0.3591485507246377" />
         <entry key="universal_recycler/src/main/res/layout/widget.xml" value="0.3591485507246377" />
       </map>

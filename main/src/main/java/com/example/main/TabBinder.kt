@@ -1,7 +1,6 @@
-package com.example.courseprojectrickandmorty.ui
+package com.example.main
 
 import androidx.fragment.app.Fragment
-import com.example.courseprojectrickandmorty.R
 import com.example.characters.CharactersFragment
 import com.example.episodes.EpisodesFragment
 import com.example.locations.LocationsFragment
