@@ -9,8 +9,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        app:srcCompat="@drawable/portal" />
+        android:layout_height="200dp"  />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvItem"

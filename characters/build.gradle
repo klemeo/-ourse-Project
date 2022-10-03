@@ -27,6 +27,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    lintOptions {
+        abortOnError true
+        warningsAsErrors true
+    }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'compileDebugSources' || task.name == 'compileReleaseSources') {
+        task.dependsOn lint
+        task.mustRunAfter lint
+    }
 }
 
 apply from: "$rootDir/scripts/deps_versions.gradle"
@@ -52,6 +69,9 @@ dependencies {
     implementation project(':base')
     implementation project(':list_widget')
     implementation project(':domain')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    lintChecks project(':customLint')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="CourseProjectRickAndMorty.app" target="11" />
+      <module name="CourseProjectRickAndMorty.base" target="11" />
+      <module name="CourseProjectRickAndMorty.character" target="11" />
+      <module name="CourseProjectRickAndMorty.characters" target="11" />
+      <module name="CourseProjectRickAndMorty.data" target="11" />
+      <module name="CourseProjectRickAndMorty.domain" target="11" />
+      <module name="CourseProjectRickAndMorty.episode" target="11" />
+      <module name="CourseProjectRickAndMorty.episodes" target="11" />
+      <module name="CourseProjectRickAndMorty.list_widget" target="11" />
+      <module name="CourseProjectRickAndMorty.location" target="11" />
+      <module name="CourseProjectRickAndMorty.locations" target="11" />
+      <module name="CourseProjectRickAndMorty.main" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

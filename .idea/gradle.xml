@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/character" />
             <option value="$PROJECT_DIR$/characters" />
+            <option value="$PROJECT_DIR$/customLint" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/episode" />

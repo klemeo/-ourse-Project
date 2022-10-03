@@ -3,48 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../layout/custom_preview.xml" value="0.27447916666666666" />
-        <entry key="app/src/main/res/drawable/ic_baseline_badge_64.xml" value="0.2625" />
-        <entry key="app/src/main/res/drawable/ic_film.xml" value="0.238" />
-        <entry key="app/src/main/res/drawable/ic_rick.xml" value="0.238" />
-        <entry key="app/src/main/res/drawable/ic_space_ship.xml" value="0.238" />
-        <entry key="app/src/main/res/font/bangers.xml" value="0.4482051282051282" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.30925925925925923" />
-        <entry key="app/src/main/res/layout/f_characters.xml" value="0.4239583333333333" />
-        <entry key="app/src/main/res/layout/f_episodes.xml" value="0.425" />
-        <entry key="app/src/main/res/layout/f_locations.xml" value="0.4239583333333333" />
-        <entry key="app/src/main/res/layout/i_character.xml" value="0.2135258358662614" />
-        <entry key="app/src/main/res/layout/i_text.xml" value="0.3591485507246377" />
-        <entry key="app/src/main/res/layout/item_character.xml" value="0.4239583333333333" />
-        <entry key="app/src/main/res/layout/w_character.xml" value="0.24791666666666667" />
-        <entry key="app/src/main/res/layout/w_list.xml" value="0.24791666666666667" />
-        <entry key="app/src/main/res/layout/w_text.xml" value="0.3591485507246377" />
-        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.23177083333333334" />
-        <entry key="app/src/main/res/mipmap/ic_launcher.xml" value="0.2535" />
-        <entry key="base/src/main/res/font/almendra_sc.xml" value="0.278125" />
-        <entry key="base/src/main/res/font/bangers.xml" value="0.278125" />
-        <entry key="base/src/main/res/layout/w_character.xml" value="0.24791666666666667" />
-        <entry key="base/src/main/res/layout/w_list.xml" value="0.4390625" />
-        <entry key="base/src/main/res/layout/w_text.xml" value="0.14814814814814814" />
-        <entry key="character/src/main/res/layout/f_character.xml" value="0.20618034447821681" />
-        <entry key="characters/src/main/res/layout/f_characters.xml" value="0.3591485507246377" />
-        <entry key="characters/src/main/res/layout/w_character.xml" value="0.3591485507246377" />
-        <entry key="episode/src/main/res/layout/f_episode.xml" value="0.19934143870314083" />
-        <entry key="episodes/src/main/res/layout/f_episodes.xml" value="0.1" />
-        <entry key="episodes/src/main/res/layout/f_locations.xml" value="0.1" />
-        <entry key="episodes/src/main/res/layout/i_text.xml" value="0.1" />
-        <entry key="location/src/main/res/layout/f_location.xml" value="0.19934143870314083" />
-        <entry key="locations/src/main/res/layout/f_locations.xml" value="0.1" />
-        <entry key="locations/src/main/res/layout/w_text.xml" value="0.1" />
-        <entry key="main/src/main/res/layout/activity_main.xml" value="0.4401041666666667" />
-        <entry key="main/src/main/res/menu/a.xml" value="0.4390625" />
-        <entry key="main/src/main/res/menu/bottom_menu.xml" value="0.45416666666666666" />
-        <entry key="universal_recycler/src/main/res/layout/w_list.xml" value="0.3591485507246377" />
-        <entry key="universal_recycler/src/main/res/layout/widget.xml" value="0.3591485507246377" />
+        <entry key="episodes/src/main/res/layout/i_text.xml" value="0.2328125" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
