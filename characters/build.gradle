@@ -30,6 +30,7 @@ android {
 }
 
 apply from: "$rootDir/scripts/deps_versions.gradle"
+apply from: "$rootDir/scripts/detekt.gradle"
 
 dependencies {
 
