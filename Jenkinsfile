@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'klemeo/otus'
+            image 'klemeo/otus:v.0.0.1'
             args '-it --memory=12g --cpus="4" -u root'
         }
     }
