@@ -1,10 +1,11 @@
 #!groovy
 pipeline {
     agent {
-        docker {
-            image 'otus'
-            args '-it --memory=12g --cpus="4" -u root'
+        environment {
+            registry = "klemeo/otus"
+            registryCredential = 'Docker'
         }
+        agent any
     }
     stages {
         stage('init') {
