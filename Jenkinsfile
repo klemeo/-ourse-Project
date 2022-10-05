@@ -1,9 +1,10 @@
 pipeline {
-    environment {
-            registry = "klemeo/otus"
-            registryCredential = 'Docker'
-        }
-    agent any
+    agent {
+          docker {
+                image 'klemeo/otus'
+                args '-it --memory=12g --cpus="4"'
+          }
+    }
     stages {
         stage('init') {
             steps {
