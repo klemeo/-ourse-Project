@@ -1,20 +1,41 @@
+#!groovy
 pipeline {
     agent {
-          docker {
-                image 'klemeo/otus:v.0.0.6'
-                args '-it --memory=12g --cpus="4"'
-          }
+        docker {
+            image 'android_otus'
+            args '-it --memory=12g --cpus="4"'
+        }
     }
     stages {
-        stage('init') {
+        stage('clone') {
             steps {
-                  echo 'chmod +x gradlew'
-                  echo './gradlew'
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    extensions: [],
+                    userRemoteConfigs: [[url: 'https://github.com/klemeo/Course-Project.git']]
+                ])
             }
         }
-        stage('build') {
+        stage("init") {
             steps {
-                 echo './gradlew assembleDebug'
+                sh "chmod +x gradlew"
+                sh "./gradlew"
+            }
+        }
+        stage("lint") {
+            steps {
+                 sh "./gradlew lintDebug"
+            }
+        }
+        stage("test") {
+            steps {
+                  sh "./gradlew testDebugUnitTest"
+            }
+        }
+        stage("build") {
+            steps {
+                  sh "./gradlew assembleDebug"
             }
         }
     }
