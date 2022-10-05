@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('init') {
             steps {
-                  sh 'chmod +x gradlew'
-                  sh './gradlew'
+                  echo 'chmod +x gradlew'
+                  echo './gradlew'
             }
         }
         stage('build') {
             steps {
-                 sh './gradlew assembleDebug'
+                 echo './gradlew assembleDebug'
             }
         }
     }
