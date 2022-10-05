@@ -1,12 +1,10 @@
-#!groovy
+@Library('jenkins-shared-library')_
 pipeline {
-    agent {
-        environment {
+    environment {
             registry = "klemeo/otus"
             registryCredential = 'Docker'
         }
-        agent any
-    }
+    agent any
     stages {
         stage('init') {
             steps {
