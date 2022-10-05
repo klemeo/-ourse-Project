@@ -3,7 +3,7 @@ FROM openjdk:11-jdk-slim
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG 'en_US.UTF-8'
 ENV ANDROID_SDK_ROOT=/opt/android
-ENV ANDROID_HOME /opt/android-sdk-linux
+ENV ANDROID_HOME /opt/android/sdk
 ENV GRADLE_HOME=/opt/gradle/gradle-7.3.1
 ENV PATH=${GRADLE_HOME}/bin:${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin:${PATH}
 
