@@ -1,0 +1,18 @@
+apply plugin: 'kotlin'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    compileOnly "com.android.tools.lint:lint-api:30.3.0"
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10"
+    testImplementation "com.android.tools.lint:lint:30.3.0"
+    testImplementation "com.android.tools.lint:lint-tests:30.3.0"
+    testImplementation 'junit:junit:4.13.2'
+}
+
+jar {
+    manifest {
+        attributes("Lint-Registry-v2": "com.elyeproj.customlint.MyIssueRegistry")
+    }
+}

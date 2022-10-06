@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/f_locations"
+        android:icon="@drawable/ic_space_ship"
+        android:title="Локации" />
+    <item
+        android:id="@+id/f_characters"
+        android:icon="@drawable/ic_rick"
+        android:title="Персонажи" />
+    <item
+        android:id="@+id/f_episodes"
+        android:icon="@drawable/ic_film"
+        android:title="Эпизоды" />
+
+</menu>
