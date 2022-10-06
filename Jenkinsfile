@@ -11,7 +11,7 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/main']],
+                    branches: [[name: '*/dev']],
                     extensions: [],
                     userRemoteConfigs: [[url: 'https://github.com/klemeo/Course-Project.git']]
                 ])
